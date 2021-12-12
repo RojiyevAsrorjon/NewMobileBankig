@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        tools:layout="@layout/screen_splash"
+        android:name="uz.gita.newmobilebankig.presentation.screens.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/idenScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen2"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/idenScreen"
+        tools:layout="@layout/screen_auth_iden"
+        android:name="uz.gita.newmobilebankig.presentation.screens.AuthIdenScreen"
+        android:label="LoginScreen" >
+        <action
+            android:id="@+id/action_loginScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerScreen"
+        tools:layout="@layout/screen_auth_register"
+        android:name="uz.gita.newmobilebankig.presentation.screens.AuthRegisterScreen"
+        android:label="RegisterScreen" >
+        <action
+            android:id="@+id/action_registerScreen_to_authSmsVerifyScreen"
+            app:destination="@id/authSmsVerifyScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/authSmsVerifyScreen"
+        tools:layout="@layout/screen_sms_verify"
+        android:name="uz.gita.newmobilebankig.presentation.screens.AuthSmsVerifyScreen"
+        android:label="AuthSmsVerifyScreen" >
+        <action
+            android:id="@+id/action_authSmsVerifyScreen_to_pinOptionScreen"
+            app:destination="@id/pinOptionScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        tools:layout="@layout/screen_card_main"
+        android:name="uz.gita.newmobilebankig.presentation.screens.CardMainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_addCardScreen"
+            app:destination="@id/addCardScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_transferMoneyOptionScreen"
+            app:destination="@id/transferMoneyOptionScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        tools:layout="@layout/screen_auth_login"
+        android:name="uz.gita.newmobilebankig.presentation.screens.AuthLoginScreen"
+        android:label="LoginScreen" >
+        <action
+            android:id="@+id/action_loginScreen_to_registerScreen2"
+            app:destination="@id/registerScreen" />
+        <action
+            android:id="@+id/action_loginScreen_to_authSmsVerifyScreen"
+            app:destination="@id/authSmsVerifyScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinOptionScreen"
+        android:name="uz.gita.newmobilebankig.presentation.screens.AuthPinOptionScreen"
+        android:label="PinOptionScreen" >
+        <action
+            android:id="@+id/action_pinOptionScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCardScreen"
+        tools:layout="@layout/screen_add_card"
+        android:name="uz.gita.newmobilebankig.presentation.screens.CardAddScreen"
+        android:label="AddCardScreen" >
+        <action
+            android:id="@+id/action_addCardScreen_to_cardSmsVerifyScreen"
+            app:destination="@id/cardSmsVerifyScreen"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardSmsVerifyScreen"
+        tools:layout="@layout/screen_sms_verify"
+        android:name="uz.gita.newmobilebankig.presentation.screens.CardSmsVerifyScreen"
+        android:label="CardSmsVerifyScreen" >
+        <action
+            android:id="@+id/action_cardSmsVerifyScreen_to_confirmedCardScreen"
+            app:destination="@id/confirmedCardScreen"
+            app:popUpTo="@id/cardSmsVerifyScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_cardSmsVerifyScreen_to_cardUnconfirmedScreen"
+            app:destination="@id/cardUnconfirmedScreen"
+            app:popUpTo="@id/cardSmsVerifyScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmedCardScreen"
+        tools:layout="@layout/screen_confirmed_card"
+        android:name="uz.gita.newmobilebankig.presentation.screens.CardConfirmedScreen"
+        android:label="ConfirmedCardScreen" />
+    <fragment
+        tools:layout="@layout/screen_unconfirmed_card"
+        android:id="@+id/cardUnconfirmedScreen"
+        android:name="uz.gita.newmobilebankig.presentation.screens.CardUnconfirmedScreen"
+        android:label="CardUnconfirmedScreen" />
+    <fragment
+        android:id="@+id/transferMoneyOptionScreen"
+        tools:layout="@layout/screen_transfer_money_option"
+        android:name="uz.gita.newmobilebankig.presentation.screens.TransferMoneyOptionScreen"
+        android:label="TransferMoneyOptionScreen" >
+        <action
+            android:id="@+id/action_transferMoneyOptionScreen_to_transferMoneyScreen"
+            app:destination="@id/transferMoneyScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/transferMoneyScreen"
+        tools:layout="@layout/screen_transfer_money"
+        android:name="uz.gita.newmobilebankig.presentation.screens.TransferMoneyScreen"
+        android:label="TransferMoneyScreen" >
+        <action
+            android:id="@+id/action_transferMoneyScreen_to_cardTransferSuccessfulScreen"
+            app:destination="@id/cardTransferSuccessfulScreen"
+            app:popUpTo="@id/transferMoneyScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardTransferSuccessfulScreen"
+        tools:layout="@layout/screen_card_transfer_successful"
+        android:name="uz.gita.newmobilebankig.presentation.screens.CardTransferSuccessfulScreen"
+        android:label="CardTransferSuccessfulScreen" />
+</navigation>

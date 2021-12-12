@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">NewMobileBankig</string>
+    <string name="jdd_bank_text">JDD BANK</string>
+    <string name="log_in_text">LOG IN</string>
+    <string name="register_text">Ro`yxatdan o`ting</string>
+    <string name="click_pin_text">CLICK-PIN kiriting</string>
+    <string name="_1">1</string>
+    <string name="click_pin_forget_text">CLICK-PIN yoddan chiqardingizmi?</string>
+    <string name="register_t_text">Registratsiya</string>
+    <string name="lastname_text">Familyangiz</string>
+    <string name="pin_code_text">PIN code</string>
+    <string name="phone_number_text">Telefon nomer</string>
+    <string name="create_image_text">Rasmingizni yarating/saqlang</string>
+    <string name="enter_details_text">Ma`lumotlarni kiriting</string>
+    <string name="save_text">Saqlash</string>
+    <string name="enter_sms_code_text">Sms dagi kodni kiriting</string>
+    <string name="sms_verify_text">Sms xabarnoma</string>
+    <string name="sms_text">Sms kod quyidagi raqamga\nyuborildi: +998990017887</string>
+    <string name="continue_text">Davom etish</string>
+    <string name="parol_text">Parol</string>
+    <string name="reset_password_tex"><u>Parolni qayta o`rnatish!</u></string>
+    <string name="identification_text">Identifikatsiya</string>
+    <string name="enter_password">Parol kiriting</string>
+    <string name="do_you_need_pin_code_text">Pin kode kerak?</string>
+    <string name="enter_pin_text">Pinni kiriting</string>
+    <string name="confirm_pin_text">Pinni tasdiqlang</string>
+</resources>

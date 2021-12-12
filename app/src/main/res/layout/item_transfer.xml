@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/panText"
+        android:padding="8dp"
+        android:text="8600000000000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/panText"
+        android:textColor="#000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:id="@+id/historyState"
+        android:text="Income" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/historyState"
+        android:text="+300000"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@id/historyState" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
